@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import ProductList from './ProductList'
+import useProduct from './useProduct'
 
 function Products() {
-    const [products, setProducts] = useState(null)
-
-    useEffect(() => {
-        fetch("http://localhost:8000/blogs")
-            .then(res => {
-                return res.json()
-            })
-            .then(data => {
-                setProducts(data)
-            })
-    }, [])
+  const {products, isPending, error} = useProduct('http://localhost:8000/products')
 
   return (
     <div>
+      {isPending && <p>Loading products...</p> }
+      {error && <p>{error}</p>}
       {products && <ProductList title="Featured Products" products={products}/>}
     </div>
   )

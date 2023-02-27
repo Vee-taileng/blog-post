@@ -9,7 +9,7 @@ function Home() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("http://localhost:8000/blogs")
+            fetch("http://localhost:8001/blogs")
                 .then(res => {
                     if (!res.ok) {
                     throw Error("Could not find the data you requested")
