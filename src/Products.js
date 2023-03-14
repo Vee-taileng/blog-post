@@ -3,7 +3,7 @@ import ProductList from './ProductList'
 import useProduct from './useProduct'
 
 function Products() {
-  const {products, isPending, error} = useProduct('http://localhost:8000/products')
+  const {products, isPending, error} = useProduct('http://localhost:8000/products/')
 
   return (
     <div>

@@ -82,12 +82,52 @@
 
 .product-preview:hover{
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-
+  
 }
 
-/* .my-blog {
-  min-width: 200px;
-  min-height: 200px;
+.product-preview a{
+  text-decoration: none;
+}
+
+.blog-details img {
+  width: 200px;
+  height: 210px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  object-fit: cover;
+}
+
+form {
+  width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+
+form label, form input,
+form textarea,
+form button,
+select{
+  width: 100%;
+  display: block;
+  margin: 5px 0px;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+form label {
+  outline: none;
+  box-shadow: none;
+  font-size: 18px;
+}
+form button {
   background-color: #f1356d;
-  color: #f2f2f2;
-} */
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  margin: 20px auto 0px auto;
+  cursor: pointer;
+}
